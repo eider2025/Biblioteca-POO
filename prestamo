@@ -1,0 +1,41 @@
+Prestamo.java
+
+import java.util.Date;
+
+public class Prestamo {
+        private Libro libro;
+            private Usuario usuario;
+                private Date inicio;
+                    private Date fin;
+                        private String estado;
+
+                            public Prestamo(Libro libro, Usuario usuario) {
+                                        this.libro = libro;
+                                                this.usuario = usuario;
+                                                        this.inicio = new Date();
+                                                                this.estado = "activo";
+                            }
+
+                                public Libro getLibro() {
+                                            return libro;
+                                }
+
+                                    public Usuario getUsuario() {
+                                                return usuario;
+                                    }
+
+                                        public void cerrarPrestamo() {
+                                                    this.fin = new Date();
+                                                            this.estado = "finalizado";
+                                        }
+
+                                            public String getEstado() {
+                                                        return estado;
+                                            }
+}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+}

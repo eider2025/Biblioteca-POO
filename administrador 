@@ -1,0 +1,53 @@
+Administrador.java
+
+import java.util.ArrayList;
+
+public class Administrador extends Usuario {
+        private ArrayList<Cliente> clientes = new ArrayList<>();
+            private ArrayList<Libro> libros = new ArrayList<>();
+                private ArrayList<Prestamo> prestamos = new ArrayList<>();
+
+                    public Administrador(int id, String nombre, String email) {
+                                super(id, nombre, email);
+                    }
+
+                        public void agregarCliente(Cliente cliente) {
+                                    clientes.add(cliente);
+                                            System.out.println("Cliente añadido: " + cliente.getNombre());
+                        }
+
+                            public void agregarLibro(Libro libro) {
+                                        libros.add(libro);
+                                                System.out.println("Libro añadido: " + libro.getTitulo());
+                            }
+
+                                public void prestarLibro(Usuario usuario, Libro libro) {
+                                            if (libro.estaDisponible()) {
+                                                            libro.prestar();
+                                                                        Prestamo prestamo = new Prestamo(libro, usuario);
+                                                                                    prestamos.add(prestamo);
+                                                                                                System.out.println("Préstamo: " + libro.getTitulo() + " a " + usuario.getNombre());
+                                            } else {
+                                                            System.out.println("No disponible: " + libro.getTitulo());
+                                            }
+                                }
+
+                                    public void devolverLibro(Prestamo prestamo) {
+                                                prestamo.getLibro().devolver();
+                                                        prestamo.cerrarPrestamo();
+                                                                System.out.println("Devuelto: " + prestamo.getLibro().getTitulo());
+                                    }
+
+                                        public ArrayList<Prestamo> obtenerPrestamos() {
+                                                    return prestamos;
+                                        }
+} 
+                                        }
+                                    }
+                                            }
+                                            }
+                                }
+                            }
+                        }
+                    }
+}

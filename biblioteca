@@ -1,0 +1,22 @@
+Biblioteca.java
+
+public class Biblioteca {
+        public static void main(String[] args) {
+                    Administrador admin = new Administrador(1, "Luis Admin", "admin@correo.com");
+                            Cliente c1 = new Cliente(2, "Pedro López", "pedro@mail.com");
+                                    Libro libro1 = new Libro("L001", "Java Avanzado", "Carlos Ruiz");
+
+                                            admin.agregarCliente(c1);
+                                                    admin.agregarLibro(libro1);
+
+                                                            admin.prestarLibro(c1, libro1);
+                                                                    System.out.println(libro1);
+
+                                                                            Prestamo p = admin.obtenerPrestamos().get(0);
+                                                                                    admin.devolverLibro(p);
+
+                                                                                            System.out.println(libro1);
+        }
+}
+        }
+}

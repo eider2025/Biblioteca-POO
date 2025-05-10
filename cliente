@@ -1,0 +1,9 @@
+Cliente.java
+
+public class Cliente extends Usuario {
+        public Cliente(int id, String nombre, String email) {
+                    super(id, nombre, email);
+        }
+}
+        }
+}
